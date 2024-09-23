@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Images in HTML</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- TO DO: Add your name to the meta author tag -->
+        <meta name="author" content="">
+        <meta name="description" content="Practice with images, video, svgs, and iframes for G.I.T. 598">
+
+        <!-- GOOGLE FONTS LINKS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap" rel="stylesheet">
+
+        <!-- CSS STYLESHEET -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <a href="#main-content" id="skip">Skip to Main Content</a>
+        <header>
+            <a href="#" aria-label="go to the home page">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M15 8h.01" />
+                    <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" />
+                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" />
+                    <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" />
+                </svg>
+            </a>
+            <h1>Images in HTML</h1>
+            <nav>
+                <ul>
+                    <li><a href="#images">Images</a></li>
+                    <li><a href="#svg">SVG</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-content">
+            <p>Follow along as we learn about adding images to web pages with HTML.</p>
+
+            <section id="images">
+                <h2>Adding Images to Your HTML</h2>
+                <p>There are a couple of reasons for adding images to your HTML. One reason is that you would like to add an image for decoration. This means that if you took it off the page, the user would still be able to use and understand the page fully, because the image isn't adding any information they won't have otherwise. The other reason is because you have images that are necessary content, and if you remove them from the page the user would be lost or missing needed information.</p>
+
+                <p>Images have two required attributes: <code>src</code>, which tells the browser where the image is and should use a relative link, and <code>alt</code>, which uses text to describe the image so that you could imagine what it looks like if you can't see it. Remember that if your image has any text in it, you have to include that in the alt text. It is also important to add the <code>height</code> and <code>width</code> attributes, as it improves the way your page looks as it loads. Ensure that those attributes are taken from the image, after editing and saving it at the correct size. Not respecting the aspect ratio will make your images look distorted on the screen.</p>
+
+                <pre>
+                    <code>
+<!--                 -->    &lt;!-- Basic Image Tag Syntax --&gt;       
+
+<!--                 -->    &lt;img src="images/image-name.png" alt="image description" width="100" height="100"&gt;
+                    </code>
+                </pre>
+
+                <div>
+                    <img src="images/keyboard.jpg" alt="a laptop with a lighted keyboard left slightly open with the light reflecting on the screen" width="400" height="400">
+                    <!-- 
+                        Photo by <a href="https://unsplash.com/@leviloot?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Levi Loot</a> on <a href="https://unsplash.com/photos/blue-and-black-audio-mixer-1l0dOhOPeyQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    -->
+                    <img src="images/lights.jpg" alt="blurred lights in white and orange reflected across water" width="400" height="400">
+                    <!-- 
+                        Photo by <a href="https://unsplash.com/@rudy_issa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rudy Issa</a> on <a href="https://unsplash.com/photos/a-blurry-image-of-a-city-H5dxb2rjwhc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    -->
+                    <img src="images/fish.jpg" alt="a school or green and blue fish in dark water" width="400" height="400">
+                    <!-- 
+                        Photo by <a href="https://unsplash.com/@fecxst?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Felipe Castilla</a> on <a href="https://unsplash.com/photos/a-group-of-fish-swimming-in-water-3wECCxn7CF4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    -->
+                </div>
+
+                <section>
+                    <h3><span>&#10033;&nbsp;</span> Adding Decorative Images to HTML</h3>
+                    <p>As explained above, a decorative images is one that if you took it off the page, the user would still be able to use and understand the page fully, because the image isn't adding any information they won't have otherwise. When adding these in your HTML, you indicate that they are decorative by leaving the alt text attribute empty. You can't leave the alt attribute off completely, just blank. Generally though, you'll add decorative images using CSS.</p>
+
+                    <pre>
+                        <code>
+<!--                 -->    &lt;!-- For Decorative Images, Leave alt Blank (or use CSS) --&gt;       
+
+<!--                 -->    &lt;img src="images/image-name.png" alt="" width="100" height="100"&gt;
+                        </code>
+                    </pre>
+
+                    <!-- TO DO: Add the decorative square-red-blue image below. Be sure to include the height and width -->
+
+                    <p class="credit">Photo by <a href="https://unsplash.com/@usgs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">USGS</a> on <a href="https://unsplash.com/wallpapers/cool/abstract?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                </section>
+
+                <section>
+                    <h3><span>&#10033;&nbsp;</span> Adding Informative Images in HTML</h3>
+                    <p>For images that are content, and necessary for understanding the page (think products, maps, etc.) you cannot leave the alt text blank, and should use it to describe the image to the best of your ability. These should also use width and height attributes that come from the edited image itself.</p>
+                    <pre>
+                        <code>
+<!--                 -->    &lt;!-- For Informative Images, Describe the Image with alt Text --&gt;       
+    
+<!--                 -->    &lt;img src="images/image-name.png" alt="useful image description" width="100" height="100"&gt;
+                        </code>
+                    </pre>
+
+                    <!-- TO DO: Add the Memphis Recording Service Image Here. Be sure to include the height and width, and some alt text. I used "neon sign in white and red that says Memphis recording service" -->
+
+                    <p class="credit">Photo by <a href="https://unsplash.com/es/@uconrad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Uwe Conrad</a> on <a href="https://unsplash.com/photos/zPnHgxeu9LI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                </section>
+
+                <section>
+                    <h3><span>&#10033;&nbsp;</span> Adding Functional Images to HTML</h3>
+                    <p>Functional images are used in place of text. Think of a search button or home link. For these, the image's description isn't important, but the text that would tell the user what happens when they click the link. We can use an <code>aria-label</code> attribute on the link to add the text that would normally be shown in the link. We'll practice this with the SVG in the next section.</p>
+
+                    <pre>
+                        <code>
+<!--                 -->    &lt;!-- For Functional Images, Leave the alt Text Blank, But Include an aria-label --&gt;       
+
+<!--                 -->    &lt;a href="index.html" aria-label="Go to the home page">
+<!--                 -->        &lt;img src="images/image-name.png" alt="image description" width="100" height="100"&gt;
+<!--                 -->    &lt;/a&gt;
+                        </code>
+                    </pre>
+                </section>
+            </section>
+
+            <section id="svg">
+                <h2>Using SVGs in HTML</h2>
+                <p>There are a few ways that you can add an SVG to your page with HTML, and today we'll practice pasting their code directly into our HTML. You can also use a link to the file as the <code>src</code> for an image tag, but pasting the code allows us to do more with CSS later. Vector images are best for graphics, because they are defined with math, and will display perfectly at any size, which saves time when they load on the page.</p>
+                <p>We are going to paste SVG icons for Facebook, Instagram, and YouTube into the footer below to practice this. Notice that I have added an <code>aria-label</code> attribute to the links wrapped around those icons. It is used when there isn't any link text, like when you wrap a link around the image.</p>
+
+                <!-- TO DO: Add the home SVG from the Tabler Icons website inside of this link -->
+                <a href="#" aria-label="Go to the home page">
+                    
+                </a>
+            </section>
+
+        </main>
+        <footer>
+            <p>For the icons below, we're using svg files. Find the Facebook, Instagram, & YouTube icons on the <a href="https://tablericons.com/" target="_blank">Tabler Icons</a> website.</p>
+            <section>
+                <h2>Follow&nbsp;Us&nbsp;on Social&nbsp;Media</h2>
+
+                <!-- TO DO: Add the Facebook icon from the tabler icons website inside of this link -->
+                <a href="#" aria-label="find us on Facebook">
+                    
+                </a>
+                
+                <!-- TO DO: Add the Instagram icon from the tabler icons website inside of this link -->
+                <a href="#" aria-label="find us on Instagram">
+                    
+                </a>
+
+                <!-- TO DO: Add the YouTube icon from the tabler icons website inside of this link -->
+                <a href="#" aria-label="find us on YouTube">
+                    
+                </a>
+            </section>
+        </footer>
+    </body>
+</html>
